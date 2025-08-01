@@ -14,7 +14,7 @@
    ```sh
    sudo apt update
    sudo apt install python3 python3-pip
-   Docker + Docker Compose
+   # Docker + Docker Compose
    ```
 
 Se non li hai:
@@ -33,21 +33,20 @@ sudo usermod -aG docker $USER
 🔁 Poi esci e rientra nella sessione WSL.
 
 2. 📁 Struttura del progetto
-   All’interno della cartella my-container-server, crea:
 
-perl
-Copia
-Modifica
+All’interno della cartella my-container-server, crea:
+
+```sh
 my-container-server/
 ├── app.py
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
+```
 
 3. 🐍 Codice Python (Flask)
 
 🔹 app.py
-
 ```sh
 from flask import Flask, jsonify
 import psycopg2
@@ -76,7 +75,6 @@ if __name__ == "__main__":
 4. 📦 Dipendenze Python
 
 🔹 requirements.txt
-
 ```sh
 flask
 psycopg2-binary
@@ -87,7 +85,6 @@ psycopg2-binary
 5. 🐳 Dockerfile per il backend
 
 🔹 Dockerfile
-
 ```sh
 FROM python:3.11-slim
 
@@ -104,7 +101,6 @@ CMD ["python3", "app.py"]
 6. ⚙️ Docker Compose per orchestrare tutto
 
 🔹 docker-compose.yml
-
 ```sh
 version: '3.8'
 
@@ -175,7 +171,6 @@ CREATE TABLE items (
 id SERIAL PRIMARY KEY,
 name TEXT NOT NULL
 );
-
 ```
 
 Verifica:
@@ -189,11 +184,11 @@ Verifica:
 
    ```sh
    INSERT INTO items (name)
-   SELECT 'micheal primo is the best!'
+   SELECT 'Michael is the best!'
    FROM generate_series(1, 10000);
    ```
 
-😄 Un inside joke!
+ (E' un mio inside joke! 😄)
 
 Verifica:
 
