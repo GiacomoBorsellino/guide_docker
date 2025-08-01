@@ -194,7 +194,7 @@ Verifica:
 
 ```sh
 SELECT COUNT(*) FROM items;
-SELECT COUNT(*) FROM items WHERE name = 'micheal primo is the best!';
+SELECT COUNT(*) FROM items WHERE name = 'Michael is the best!';
 ```
 
 10. 🔄 Test dell'API
