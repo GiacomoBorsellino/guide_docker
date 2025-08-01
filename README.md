@@ -163,14 +163,13 @@ Apri una shell nel container PostgreSQL:
 
 ```sh
 sudo docker exec -it my-container-server-db-1 psql -U giacomo -d mydb
-Crea la tabella items:
-sql
-Copia
-Modifica
-CREATE TABLE items (
-id SERIAL PRIMARY KEY,
-name TEXT NOT NULL
-);
+
+# Crea la tabella items:
+
+  CREATE TABLE items (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL
+  );
 ```
 
 Verifica:
